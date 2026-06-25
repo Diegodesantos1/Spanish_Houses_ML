@@ -65,6 +65,6 @@ Dependencias principales: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `tensorf
 
 > **Nota sobre reproducibilidad:** los modelos lineales, Random Forest y XGBoost usan `random_state=42` y son completamente reproducibles. El MLP (red neuronal) puede presentar pequeñas variaciones entre ejecuciones por la inicialización aleatoria de TensorFlow/Keras, salvo que se fije `tf.random.set_seed(42)` antes de su entrenamiento.
 
-## 📈 Resultados clave (SHAP)
+## Resultados clave (SHAP)
 
 Las variables más influyentes en la predicción de XGBoost son, por orden: `bath_num` (número de baños), `m2_real` (superficie construida), y los indicadores geoeconómicos provinciales `population_prov` y `renta_media_prov`. Esto confirma que la ubicación geoeconómica explica el precio de un inmueble tanto o más que muchas de sus características físicas.
