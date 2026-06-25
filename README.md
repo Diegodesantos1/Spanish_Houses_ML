@@ -5,17 +5,17 @@ Trabajo de Fin de Grado — Grado en Informática (GIF), Universidad Alfonso X e
 
 ---
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automático para la estimación del precio de viviendas en España, comparando cinco familias de modelos de regresión y analizando la interpretabilidad del mejor modelo mediante SHAP.
 
 **Pregunta de investigación:** ¿En qué medida los métodos de *gradient boosting* superan a redes neuronales y modelos lineales en la predicción de precios inmobiliarios en un mercado nacionalmente heterogéneo como el español, y qué variables —físicas, geoeconómicas y de ingeniería— determinan dichas predicciones?
 
-## 📊 Dataset
+##  Dataset
 
 [Spanish Housing Dataset](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and) (Kaggle): 100.000 anuncios inmobiliarios extraídos de Idealista (2019), enriquecidos con indicadores socioeconómicos provinciales del INE.
 
-## 🧠 Modelos implementados
+##  Modelos implementados
 
 | Modelo | RMSE (€) | MAE (€) | R² |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automá
 4. **Evaluación** — RMSE, MAE, R² sobre el conjunto de test
 5. **Interpretabilidad** — análisis SHAP sobre el mejor modelo (XGBoost)
 
-## 📁 Estructura del repositorio
+##  Estructura del repositorio
 
 ```
 .
@@ -46,7 +46,7 @@ Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automá
 └── README.md
 ```
 
-## ⚙️ Requisitos
+## Requisitos
 
 - Python 3.12
 - Ver `requirements.txt`
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 Dependencias principales: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `tensorflow`, `shap`, `matplotlib`, `seaborn`.
 
-## ▶️ Ejecución
+##  Ejecución
 
 1. Descarga el dataset desde [Kaggle](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and) y colócalo en `data/spanish_houses.csv`
 2. Abre `TFG_Pipeline.ipynb` en Jupyter Notebook o VS Code
