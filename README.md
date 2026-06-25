@@ -1,8 +1,6 @@
 # Desarrollo y Evaluación de Modelos de Aprendizaje Automático
 ### Predicción de precios inmobiliarios en el mercado español
 
-Trabajo de Fin de Grado — Grado en Informática (GIF), Universidad Alfonso X el Sabio.
-
 ---
 
 ## Descripción
