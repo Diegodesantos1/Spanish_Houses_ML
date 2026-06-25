@@ -27,7 +27,7 @@ Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automá
 
 **Mejor modelo: XGBoost**, con interpretabilidad analizada mediante valores SHAP (`TreeExplainer`).
 
-## 🔧 Pipeline
+##  Pipeline
 
 1. **EDA** — distribución del precio, dispersión precio-m², heterogeneidad por tipo de vivienda y zona
 2. **Preprocesamiento** — imputación de valores ausentes, eliminación de outliers por percentil, *feature engineering* (`ratio_util_real`, `amenity_score`, `rooms_per_m2`), codificación OHE y estandarización Z-score
