@@ -19,11 +19,11 @@ Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automá
 
 | Modelo | RMSE (€) | MAE (€) | R² |
 |---|---|---|---|
-| Regresión Lineal | 4,77 × 10¹³ | 7,21 × 10¹¹ | < 0 |
-| Ridge | 214.098 | 125.800 | 0,5410 |
-| Random Forest | 166.399 | 83.102 | 0,7227 |
-| **XGBoost** | **163.610** | **83.442** | **0,7320** |
-| MLP (red neuronal) | 173.655 | 91.635 | 0,6980 |
+| Regresión Lineal | 4,77 × 10¹³ | 7,21 × 10¹¹ | −2,28 × 10¹⁶ |
+| Ridge | 214.098 | 125.799 | 0,5410 |
+| Random Forest | 166.398 | 83.101 | 0,7227 |
+| **XGBoost** | **163.610** | **83.441** | **0,7320** |
+| MLP (red neuronal) | 174.775 | 94.383 | 0,6941 |
 
 **Mejor modelo: XGBoost**, con interpretabilidad analizada mediante valores SHAP (`TreeExplainer`).
 
