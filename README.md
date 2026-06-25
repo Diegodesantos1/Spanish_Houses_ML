@@ -59,7 +59,7 @@ Dependencias principales: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `tensorf
 
 ##  Ejecución
 
-1. Descarga el dataset desde [Kaggle](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and) y colócalo en `data/spanish_houses.csv`
+1. En caso de error, descarga el dataset desde [Kaggle](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and) y colócalo en `data/spanish_houses.csv`
 2. Abre `TFG_Pipeline.ipynb` en Jupyter Notebook o VS Code
 3. Ejecuta todas las celdas en orden (`Run All`)
 
