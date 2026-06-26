@@ -60,7 +60,7 @@ Dependencias principales: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `tensorf
 2. Abre `TFG_Pipeline.ipynb` en Jupyter Notebook o VS Code
 3. Ejecuta todas las celdas (`Run All`)
 
-> **Nota sobre reproducibilidad:** los modelos lineales, Random Forest y XGBoost usan `random_state=42` y son completamente reproducibles. En cambio, el MLP (red neuronal) puede presentar pequeñas variaciones entre ejecuciones por la inicialización aleatoria de TensorFlow/Keras, salvo que se fije `tf.random.set_seed(42)` antes de su entrenamiento.
+> **Nota sobre reproducibilidad:** los modelos lineales, Random Forest y XGBoost usan `random_state=42` y son completamente reproducibles. En cambio, el MLP (red neuronal) puede presentar pequeñas variaciones entre ejecuciones por la inicialización aleatoria de TensorFlow/Keras.
 
 ## Resultados clave (SHAP)
 
