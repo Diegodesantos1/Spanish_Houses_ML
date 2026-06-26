@@ -5,9 +5,8 @@
 
 ## Descripción
 
-Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automático para la estimación del precio de viviendas en España, comparando cinco familias de modelos de regresión y analizando la interpretabilidad del mejor modelo mediante SHAP.
-
-**Pregunta de investigación:** ¿En qué medida los métodos de *gradient boosting* superan a redes neuronales y modelos lineales en la predicción de precios inmobiliarios en un mercado nacionalmente heterogéneo como el español, y qué variables —físicas, geoeconómicas y de ingeniería— determinan dichas predicciones?
+Este proyecto desarrolla y evalúa un *pipeline* completo de machine learning para poder estimar el precio de las viviendas en España, para ello, se han comparando cinco modelos de regresión y se ha analizado
+la interpretabilidad del mejor modelo utilizando SHAP.
 
 ##  Dataset
 
@@ -23,15 +22,15 @@ Este proyecto desarrolla y evalúa un *pipeline* completo de aprendizaje automá
 | **XGBoost** | **163.610** | **83.441** | **0,7320** |
 | MLP (red neuronal) | 174.775 | 94.383 | 0,6941 |
 
-**Mejor modelo: XGBoost**, con interpretabilidad analizada mediante valores SHAP (`TreeExplainer`).
+**Mejor modelo: XGBoost**, el cual se ha analizado su interpretabilidad utilizando (`TreeExplainer`) mediante valores SHAP.
 
 ##  Pipeline
 
-1. **EDA** — distribución del precio, dispersión precio-m², heterogeneidad por tipo de vivienda y zona
-2. **Preprocesamiento** — imputación de valores ausentes, eliminación de outliers por percentil, *feature engineering* (`ratio_util_real`, `amenity_score`, `rooms_per_m2`), codificación OHE y estandarización Z-score
-3. **Entrenamiento** — 5 modelos con `train_test_split` (80/20) y `RandomizedSearchCV` para Random Forest y XGBoost
-4. **Evaluación** — RMSE, MAE, R² sobre el conjunto de test
-5. **Interpretabilidad** — análisis SHAP sobre el mejor modelo (XGBoost)
+1. **EDA** — Análisis inicial: distribución del precio, dispersión precio-m², heterogeneidad por tipo de vivienda y zona.
+2. **Preprocesamiento** — Limpieza de datos, relleno de valores nulos, eliminación de outliers por percentil, creación de nuevas variables (`ratio_util_real`, `amenity_score`, `rooms_per_m2`), codificación OHE y estandarización Z-score.
+3. **Entrenamiento** — 5 modelos con `train_test_split` (80/20) y `RandomizedSearchCV` para Random Forest y XGBoost.
+4. **Evaluación** — RMSE, MAE, R² sobre el conjunto de test.
+5. **Interpretabilidad** — análisis SHAP sobre el mejor modelo (XGBoost).
 
 ##  Estructura del repositorio
 
@@ -59,10 +58,10 @@ Dependencias principales: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `tensorf
 
 1. En caso de error, descarga el dataset desde [Kaggle](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and) y colócalo en `data/spanish_houses.csv`
 2. Abre `TFG_Pipeline.ipynb` en Jupyter Notebook o VS Code
-3. Ejecuta todas las celdas en orden (`Run All`)
+3. Ejecuta todas las celdas (`Run All`)
 
-> **Nota sobre reproducibilidad:** los modelos lineales, Random Forest y XGBoost usan `random_state=42` y son completamente reproducibles. El MLP (red neuronal) puede presentar pequeñas variaciones entre ejecuciones por la inicialización aleatoria de TensorFlow/Keras, salvo que se fije `tf.random.set_seed(42)` antes de su entrenamiento.
+> **Nota sobre reproducibilidad:** los modelos lineales, Random Forest y XGBoost usan `random_state=42` y son completamente reproducibles. En cambio, el MLP (red neuronal) puede presentar pequeñas variaciones entre ejecuciones por la inicialización aleatoria de TensorFlow/Keras, salvo que se fije `tf.random.set_seed(42)` antes de su entrenamiento.
 
 ## Resultados clave (SHAP)
 
-Las variables más influyentes en la predicción de XGBoost son, por orden: `bath_num` (número de baños), `m2_real` (superficie construida), y los indicadores geoeconómicos provinciales `population_prov` y `renta_media_prov`. Esto confirma que la ubicación geoeconómica explica el precio de un inmueble tanto o más que muchas de sus características físicas.
+Las variables más influyentes en la predicción de XGBoost son: `bath_num` (número de baños), `m2_real` (superficie construida), y los indicadores geoeconómicos provinciales `population_prov` y `renta_media_prov`. Esto confirma que la zona y ubicación geoeconómica explica el precio de un inmueble tanto o más que muchas de las características físicas propias.
